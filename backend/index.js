@@ -11,6 +11,10 @@ const app = express();
 app.use(cors()); 
 app.use(express.json());
 
+app.get('/api/health-check', async (req, res) => {
+  res.json({ message: 'OK' });
+});
+
 app.post('/api/save', async (req, res) => {
   // We extract 'message' from the frontend request
   const { message } = req.body;
