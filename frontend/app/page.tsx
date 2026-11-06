@@ -13,7 +13,7 @@ export default function Home() {
     const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
 
     try {
-      const response = await fetch(`${API_URL}/api/save`, {
+      const response = await fetch(`${API_URL}/save`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
